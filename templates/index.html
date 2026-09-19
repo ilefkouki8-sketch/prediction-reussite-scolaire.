@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prédicteur de réussite scolaire</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="conteneur">
+        <h1>🎓 Prédicteur de réussite scolaire</h1>
+        <p class="sous-titre">Projet de Machine Learning — prédiction de la note d'examen à partir de facteurs personnels et scolaires</p>
+
+        {% if erreur %}
+            <div class="alerte">{{ erreur }}</div>
+        {% endif %}
+
+        <form method="POST">
+            {% for champ in champs %}
+                <div class="ligne-champ">
+                    <label>{{ champ[1] }}</label>
+                    {% if champ[2] == "nombre" %}
+                        <input type="number" step="any" name="{{ champ[0] }}" required>
+                    {% else %}
+                        <select name="{{ champ[0] }}" required>
+                            {% for option in champ[3] %}
+                                <option value="{{ option }}">{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button type="submit">Prédire la note</button>
+        </form>
+
+        {% if prediction is not none %}
+            <div class="resultat">
+                <h2>Note prédite : {{ prediction }} / 100</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
