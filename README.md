@@ -1,3 +1,6 @@
+<img width="988" height="840" alt="Capture d&#39;écran 2026-09-19 183354" src="https://github.com/user-attachments/assets/fc92a48a-e273-4f6d-b791-309e6c2f3574" />
+<img width="918" height="908" alt="Capture d&#39;écran 2026-09-19 183350" src="https://github.com/user-attachments/assets/f3a7ceab-f6c8-4a8c-8826-3a3a64e39ded" />
+<img width="907" height="876" alt="Capture d&#39;écran 2026-09-19 183344" src="https://github.com/user-attachments/assets/01270dec-f1e4-45bb-bdbd-6b2fa6952297" />
 # 🎓 Prédicteur de réussite scolaire
 
 Projet de Machine Learning réalisé dans le cadre de ma préparation à l'admission en école d'ingénieur (domaine IA2R).
